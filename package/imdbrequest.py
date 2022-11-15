@@ -9,7 +9,11 @@ class ImdbRequest:
     def get_movies(cls, search) -> Movie:
         response = requests.get(cls._base_url+search)
 
-        movies = Response(status_code=response.status_code,
+        imdbResponse = Response(status_code=response.status_code,
                           content=response.json())
 
-        return Movie(id=movies.content['results'][0].get('id'))
+        movies=[]
+        for movie in imdbResponse.content['results']:
+            movies.append(Movie(id=movie.get('id')))
+
+        return movies
