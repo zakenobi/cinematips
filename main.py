@@ -1,8 +1,11 @@
 from package.imdbrequest import ImdbRequest
 
 def main():
-    movies = ImdbRequest.get_movies(search="Inception 2010")
+    movies = ImdbRequest.get_movies(search="Star Wars")
 
-    print(movies[1].id)
+    movies.sort(key=lambda x: x.ratingRottenTomatoes, reverse=True)
+
+    for movie in movies:
+        print(f"{movie.ratingRottenTomatoes} : {movie.title}")
 
 main()
