@@ -6,6 +6,12 @@ class Movie:
 
         self.id = id
         self.title = rating['fullTitle']
-        self.ratingRottenTomatoes = int(rating['rottenTomatoes'])
-        self.ratingMetacritic = int(rating['metacritic'])
+        intRating:int = 0
+        try:
+            intRating = int(rating['rottenTomatoes'])
+        except:
+            intRating = 0
+            
+        self.ratingRottenTomatoes = intRating
+        self.ratingMetacritic = rating['metacritic']
         self.year = rating['year']
