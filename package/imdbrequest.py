@@ -6,7 +6,7 @@ class ImdbRequest:
     _base_url = "https://imdb-api.com/en/API/SearchMovie/k_vg4yaklt/"
 
     @classmethod
-    def get_movies(cls, search) -> Movie:
+    def get_movies(cls, search:str) -> Movie:
         response = requests.get(cls._base_url+search)
         
         if response.status_code != 200:
@@ -21,6 +21,7 @@ class ImdbRequest:
 
         movies=[]
         for movie in imdbResponse.content['results']:
-            movies.append(Movie(id=movie.get('id')))
+            if movie != None:
+                movies.append(Movie(id=movie.get('id')))
 
         return movies
