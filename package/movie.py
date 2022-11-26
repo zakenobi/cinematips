@@ -1,10 +1,11 @@
 from package.imdbrating import ImdbRating
 
 class Movie:
-    def __init__(self, id:str) -> None :
+    def __init__(self, id:str, image:str) -> None :
         rating = ImdbRating.get_rating(id).content
 
         self.id = id
+        self.image = image
         self.title = rating['fullTitle']
         intRating:int = 0
         try:

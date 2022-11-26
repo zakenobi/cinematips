@@ -22,6 +22,6 @@ class ImdbRequest:
         movies=[]
         for movie in imdbResponse.content['results']:
             if movie != None:
-                movies.append(Movie(id=movie.get('id')))
+                movies.append(Movie(id=movie.get('id'), image=movie.get('image')))
 
         return movies
