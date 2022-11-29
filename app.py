@@ -14,7 +14,7 @@ src="https://www.googletagmanager.com/gtag/js?id=G-MHZRLJ3W6W"></script>
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date());
  gtag('config', 'G-MHZRLJ3W6W');
-</script>""")
+</script>""", width=0, height=0)
 
 title = st.text_input('Movie title')
 st.write('The current movie title is', title)
