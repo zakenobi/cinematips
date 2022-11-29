@@ -16,7 +16,7 @@ src="https://www.googletagmanager.com/gtag/js?id=G-MHZRLJ3W6W"></script>
  gtag('config', 'G-MHZRLJ3W6W');
 </script>""")
 
-title = st.text_input('Movie title')
+title = st.header('Movie title')
 st.write('The current movie title is', title)
 
 movies = ImdbRequest.get_movies(search=title)
