@@ -4,17 +4,25 @@ from PIL import Image
 import requests
 from io import BytesIO
 import streamlit.components.v1 as components
+import os
+import re
 
-components.html("""
- <!-- Google tag (gtag.js) -->
-<script async
-src="https://www.googletagmanager.com/gtag/js?id=G-MHZRLJ3W6W"></script>
+code = """<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MHZRLJ3W6W"></script>
 <script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- gtag('config', 'G-MHZRLJ3W6W');
-</script>""", width=0, height=0)
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MHZRLJ3W6W');
+</script>"""
+
+a=os.path.dirname(st.__file__)+'/static/index.html'
+with open(a, 'r') as f:
+    data=f.read()
+    if len(re.findall('UA-', data))==0:
+        with open(a, 'w') as ff:
+            newdata=re.sub('<head>','<head>'+code,data)
+            ff.write(newdata)
 
 title = st.text_input('Movie title')
 st.write('The current movie title is', title)
