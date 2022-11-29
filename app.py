@@ -3,6 +3,18 @@ from package.imdbrequest import ImdbRequest
 from PIL import Image
 import requests
 from io import BytesIO
+import streamlit.components.v1 as components
+
+components.html("""
+ <!-- Google tag (gtag.js) -->
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-MHZRLJ3W6W"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-MHZRLJ3W6W');
+</script>""")
 
 title = st.text_input('Movie title')
 st.write('The current movie title is', title)

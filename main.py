@@ -1,11 +1,21 @@
-from package.imdbrequest import ImdbRequest
+from flask import Flask
+app = Flask(__name__)
 
-def main():
-    movies = ImdbRequest.get_movies(search="Star Wars")
+@app.route('/')
+def hello_world():
+ prefix_google = """
+ <!-- Google tag (gtag.js) -->
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-MHZRLJ3W6W"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-MHZRLJ3W6W');
+</script>
+ """
+ return prefix_google + "Hello World"
 
-    movies.sort(key=lambda x: x.ratingRottenTomatoes, reverse=True)
-
-    for movie in movies:
-        print(f"{movie.ratingRottenTomatoes} : {movie.title}")
-
-main()
+if __name__ == '__main__':
+    app.run()
+    
