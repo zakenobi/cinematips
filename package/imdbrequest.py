@@ -3,11 +3,11 @@ from package.responce import Response
 from package.movie import Movie
 
 class ImdbRequest:
-    _base_url = "https://imdb-api.com/en/API/SearchMovie/k_vg4yaklt/"
+    _base_url = "https://imdb-api.com/en/API/SearchMovie/"
 
     @classmethod
-    def get_movies(cls, search:str) -> Movie:
-        response = requests.get(cls._base_url+search)
+    def get_movies(cls, search:str, api_key:str = 'k_vg4yaklt') -> Movie:
+        response = requests.get(cls._base_url + api_key + '/' + search)
         
         if response.status_code != 200:
             raise NameError('API Unavailable')
@@ -16,8 +16,7 @@ class ImdbRequest:
                           content=response.json())
 
         if imdbResponse.content['results'] == None:
-            print(imdbResponse.content['errorMessage'])
-            raise NameError('Response is empty')
+            raise NameError(imdbResponse.content['errorMessage'])
 
         movies=[]
         for movie in imdbResponse.content['results']:
