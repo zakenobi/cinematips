@@ -1,4 +1,7 @@
-# Cinematips
+[![Website cinematips.streamlit.app](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://cinematips.streamlit.app) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![GitHub license](https://img.shields.io/github/license/zakenobi/cinematips)](https://github.com/zakenobi/cinematips/LICENSE)
+
+
+# ✨ Cinematips ✨
 ## Intro
 This project is a website that uses IMDB API for getting a movies rating. The project establish's it-self in two classes, API and web scapping, and Digital Traces. It has bein authored by Alexandra Mille-Egea and Zachary Gagnou.
 ## How it works
