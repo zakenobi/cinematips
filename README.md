@@ -1,2 +1,33 @@
-# cinematips
-Data source class project working with api's by GAGNOU Zachary and MILLE-EGEA Alexandra
+# Cinematips
+## Intro
+This project is a website that uses IMDB API for getting a movies rating. The project establish's it-self in two classes, API and web scapping, and Digital Traces. It has bein authored by Alexandra Mille-Egea and Zachary Gagnou.
+## How it works
+Using the webb app is very simple, as you get on the home pages you are derectly greated by a search bar where you enter the name of the movie you wish to know the score and it will show you all the best results.
+
+## Where to find it
+The web app is hosted by streamlit app at: https://cinematips.streamlit.app/
+
+But if you are fealing adventurous you can run the docker version. First get the docker file from docker hub:
+
+```console
+foo@bar:~$ sudo docker pull zakenobi/cinematips
+```
+
+Now you can run the image:
+
+```console
+foo@bar:~$ sudo docker run -p 8501:8501 zakenobi/cinematips
+```
+You can now access the app at http://localhost:8501. (You can also run the image with the -d flag to keep it running) Sorry Mac and Windows users you're on your own for this one.
+## CI
+
+GitHub Actions 
+
+## CD
+
+Automatic with streamlit hub
+
+## Google Analytics
+
+
+## Improvments
