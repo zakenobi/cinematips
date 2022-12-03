@@ -1,5 +1,6 @@
 import requests
-from package.responce import Response
+from package.response import Response
+
 
 class ImdbRating:
     _base_url = "https://imdb-api.com/en/API/Ratings/k_vg4yaklt/"

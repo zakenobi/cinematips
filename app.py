@@ -15,12 +15,12 @@ code = """<!-- Global site tag (gtag.js) - Google Analytics -->
   gtag('config', 'G-37VMDHT2D6');
 </script>"""
 
-a=os.path.dirname(st.__file__)+'/static/index.html'
+a = os.path.dirname(st.__file__)+'/static/index.html'
 with open(a, 'r') as f:
-    data=f.read()
-    if len(re.findall('UA-', data))==0:
+    data = f.read()
+    if len(re.findall('UA-', data)) == 0:
         with open(a, 'w') as ff:
-            newdata=re.sub('<head>','<head>'+code,data)
+            newdata = re.sub('<head>', '<head>' + code, data)
             ff.write(newdata)
 
 api_key = 'k_vg4yaklt'
@@ -32,7 +32,7 @@ st.write('The current movie title is', title)
 if title != '':
     try:
         movies = ImdbRequest.get_movies(search=title, api_key=api_key)
-    except:
+    except EnvironmentError:
         st.markdown("""
         :warning:
         Ho no... It looks like there was a probleme Try making a [new api key](https://imdb-api.com/API)

@@ -21,11 +21,13 @@ foo@bar:~$ sudo docker run -p 8501:8501 zakenobi/cinematips
 You can now access the app at http://localhost:8501. (You can also run the image with the -d flag to keep it running) Sorry Mac and Windows users you're on your own for this one.
 ## CI
 
-GitHub Actions 
+GitHub Actions for python syntax error and proper habits with flake8.
 
 ## CD
 
-Automatic with streamlit hub
+Automatic with streamlit hub that checks the github repo for changes. The way they manage to do that is thanks to [Watchtower](https://containrrr.dev/watchtower/), We recomend that you check it out it's very cool!
+
+In addition their 
 
 ## Google Analytics
 
