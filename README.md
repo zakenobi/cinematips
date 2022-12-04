@@ -34,6 +34,12 @@ Automatic with streamlit hub that checks the github repo for changes. The way th
 
 In addition their is an automatic build and publishing of the docker image for the app to [Docker hub](https://hub.docker.com/repository/docker/zakenobi/cinematips).
 
+The package made to interact with the API is also published to [PyPi](https://pypi.org/project/cinematips/) and can be tested:
+
+```console
+foo@bar:~$ pip install cinematips
+```
+
 ## Google Analytics
 This web site is using google analytics for educational purpose only monitoring the traffic.
 
