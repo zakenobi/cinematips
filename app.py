@@ -1,5 +1,5 @@
 import streamlit as st
-from package.imdbrequest import ImdbRequest
+from cinematips.imdbrequest import ImdbRequest
 from PIL import Image
 import requests
 from io import BytesIO

@@ -1,5 +1,5 @@
 import requests
-from package.response import Response
+from cinematips.response import Response
 
 
 class ImdbRating:

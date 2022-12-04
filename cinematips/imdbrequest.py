@@ -1,6 +1,6 @@
 import requests
-from package.response import Response
-from package.movie import Movie
+from cinematips.response import Response
+from cinematips.movie import Movie
 
 
 class ImdbRequest:

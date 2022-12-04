@@ -1,4 +1,4 @@
-from package.imdbrating import ImdbRating
+from cinematips.imdbrating import ImdbRating
 
 
 class Movie:
