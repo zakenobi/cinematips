@@ -23,6 +23,12 @@ with open(a, 'r') as f:
             newdata = re.sub('<head>', '<head>' + code, data)
             ff.write(newdata)
 
+st.set_page_config(
+    page_title="Cinematips",
+    page_icon="🎬",
+)
+
+
 api_key = 'k_vg4yaklt'
 
 st.header('Welcome to Cinematips!')
