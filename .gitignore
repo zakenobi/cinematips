@@ -1,3 +1,4 @@
 venv
 .deta/
 .streamlit/
+client_secrets.json
