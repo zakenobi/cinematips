@@ -1,2 +1,3 @@
 venv
 .deta/
+.streamlit/
