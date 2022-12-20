@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit.components.v1 import html
 from html import unescape
 import requests
+import pandas as pd
 
 
 # Define your javascript
@@ -23,10 +24,14 @@ if st.button("Say hello world in all the consoles"):
 
 # Button to make a request
 if st.button("Make a request"):
+    # Set a custom cookie
+    cookie = {"Test": "Hello World"}
+
     # Make a request to the server
-    response = requests.get("https://www.google.com")
+    response = requests.get("https://www.google.com", cookies=cookie)
     # Get the cookies from the response
     cookie = response.cookies._cookies
+
     # Print the response to the console
     print(cookie)
     # Print the response to the browser console as markdown
@@ -35,49 +40,27 @@ if st.button("Make a request"):
 # Button to make a request to google analytics
 if st.button("Ganalytics"):
     # Make a request to the server
-    response = requests.get("https://analytics.google.com/analytics/web/#/p344238377/reports/intelligenthome?params=_u..nav%3Dmaui")
+    response = requests.get("https://analytics.google.com/analytics/web/#/p344238377/reports/reportinghub?params=_u..nav%3Dmaui")
 
     # Print the response to the console
     st.text(response.status_code)
     # Print the response to the browser console as markdown
-    st.markdown(response.text)
+    html(response.text, height=500)
 
 # Button to make a request to google analytics with credentials
 if st.button("Ganalytics with credentials"):
-    from google.oauth2.credentials import Credentials
-    from google_auth_oauthlib.flow import InstalledAppFlow
-    
-    # Set up the OAuth flow
-    scopes = ['https://www.googleapis.com/auth/analytics.readonly']
-    
-    flow = InstalledAppFlow.from_client_secrets_file(
-        'client_secrets.json', scopes=scopes)
+    # Import the necessary functions from "GA/connect.py"
+    from GA.connect import initialize_analyticsreporting, get_report, handle_report
 
-    
-    # Prompt the user to grant access
-    creds = flow.run_console()
-    
-    # Save the credentials to a file
-    with open('credentials.json', 'w') as f:
-        f.write(creds.to_json())
-    
-    # Create a requests session with the credentials
-    session = requests.Session()
-    session.auth = Credentials.from_authorized_user_info(info=creds.to_json())
-    
-    # Make a request to the Google Analytics API
-    response = session.get(
-        'https://www.googleapis.com/analytics/v3/data/ga',
-        params={
-            'ids': 'ga:12345',  # Replace with your Google Analytics view ID
-            'start-date': '7daysAgo',
-            'end-date': 'today',
-            'metrics': 'ga:sessions',
-        }
-    )
-    
-    # Print the response
-    print(response.json())
+    analytics = initialize_analyticsreporting()
 
+    global dfanalytics
+    dfanalytics = []
 
-    
+    rows = []
+    response = handle_report(analytics,'0',rows)
+
+    dfanalytics = pd.DataFrame(list(rows))
+
+    # Print the response to the console
+    st.markdown(dfanalytics)

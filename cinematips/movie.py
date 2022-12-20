@@ -11,7 +11,7 @@ class Movie:
         intRating: int = 0
         try:
             intRating = int(rating['rottenTomatoes'])
-        except EnvironmentError:
+        except:
             intRating = 0
 
         self.ratingRottenTomatoes = intRating
