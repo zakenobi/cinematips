@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cinematips",
+  "private_key_id": "82abd9cf10b42f9f78a819a74d15c559099ae01a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDQtmfFBl7rF9aQ\nE6BgxHNb/vo0ocMAku1+kRnaon3B1Zn0zFai93zRfcNCcv88edLSeVmVjNGFHmES\nyJ6F7w3wH4JbQEhWDCVgHc+pYOEHsRe5hmxyupNCJlApk/uYCJzDsd72ntjNhCGB\nRbqqWjbAA+kyOATBDQ4Ym4h9DUpsDNpkqzS8uI77vo8QsalXR/kGlS5gGtXHACsc\nIffptUZpVktNClUypiE7MDruCer6wj36A1RyX9Nlz38IriK3mtnFiJW0ARFAlvSS\n5oI2Br63YUwxzyeyqnfbkQVoTGokGqImNhGJzCdjBQ5cIsQKLoxfzDf7CteC4V2g\nGqMnoMdFAgMBAAECggEAEVIfS4JrVymmdKou+Z45ZU2ZoyDiPNvKBOJy2apO3cq7\nGPiU9LetmU8ivhLVbBs/a+3b3uWNr8qlILjF2x9LMf3Tb3zmuT65zVURWkuqxod5\nDLxYp1l6MMJa4xB1D+7LCmc/td+EkOMMdXIoJcy7KsqdoZLKO4vjUGx78nDWF8r/\nky483Sf0S0roxRH7105mIdHwGEc1EYr/5orUvW3/Pd7PP8qDkkK2A4M1VGKlFZJT\ncosx/TFHYJuzDBN5bHUE3qRvWLLupShcZPM1rqNhixd5HApBZrSMuJAgoN50kWZt\n17mI7Qj+nTtXKap8ClOPM6dW5yR8mACMCL3NB36M8wKBgQDpqRGRQeXcGuRDu0SJ\n+NjsdycqLTNSgxtxx6Xms9fgQ5AoRyGtFrQIRbzQ7yU9uOOXCYIeJ2QJWaPIX1yN\nOvoUyEGLaSmM9EpRau/kPi0H4A0kvbsgV66+ERpUtzGW8V/CLBpEPOv9pmhYdPza\niGTv7hHVnHNMuxwzg0BeHA5eXwKBgQDkqroXLB3ewit+OVh2pQCYzrftLAah7TqA\negTgHPRIOc6mkXCpM83fdiB2ZtqhBl76DbpSIbEGWyISoQKQJdHm4xfEkbLnjefC\nIugJAJAlEem+z44g1lRoNRDxFQ89vNSQKBPBAREpn8bXmp1tFNN+h576yY+vqMzP\nvhRK/k102wKBgQDKsEBu8u0EG8e7AW2ZCeaSaWHt8ju87cIW1wsQrx0qizE330xV\nK4aMToJV870oZ4P1dugKZD0g50NuA1rzoB9je7tvxY+nmBoHum3SXiUN2ctM/dCf\nY7BPa+KdbjR0LXnVpBA89WP5KisF4KWepAZ7ItcRp59VBlKWVNq3SDsmnQKBgQCm\nmGf5p++fMnHDhX4Y+n/j1H+V8MRoRtCfd8aDjTTARjVzj3S4IYD1NDfUa30PYffi\nUAwV+GvjyJObZOjcImG5yGuxj8D7CJz4CLxqipl6GIHmvYq8C8r1HOxZ6FDxVti6\nqigyLlfVro2M2R2mskyf26kM57qibOXC2KYqOPovjwKBgCpgnxtUR6fnL8kiUvVO\nOIwfZfUrN40GYsQoDq/PxGfe63al4j0Yw2kFs3aSbNoqjfeOuiiH9C890p/of0m0\nD/H8uxnZ3K5U0RuOSZ2qRjmiH0yJzvs7xec1nzoIp/6TTU2rnk5c3w36hd2xyWlb\nP7KMpznFMibc5QXx2KEEFs9t\n-----END PRIVATE KEY-----\n",
+  "client_email": "cinematips@cinematips.iam.gserviceaccount.com",
+  "client_id": "116881342359812488405",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cinematips%40cinematips.iam.gserviceaccount.com"
+}
